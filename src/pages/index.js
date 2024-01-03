@@ -1,23 +1,19 @@
-import About from './components/About'
-import Contact from './components/Contact'
-import Footer from './components/Footer'
-import Hero from './components/Hero'
-import Navbar from './components/Navbar'
-import Project from './components/Project'
+import ContactSection from "@/components/homepage/ContactSection";
+import HeroSection from "@/components/homepage/HeroSection";
+import HomepageLayout from "@/components/homepage/HomepageLayout";
+import { ListSosmedHorizontal } from "@/components/homepage/ListSosmedComponent";
+import Link from "next/link";
 
 const Home = () => {
   return (
-    <div className='bg-primary overflow-x-hidden'>
-      <Navbar />
-      <div className="container mx-auto text-white mt-16 px-3">
-        <Hero/>
-        <About/>
-        <Project />
-        <Contact />
-      </div>
-      <Footer />
+    <div className="bg-[url('/assets/hero-pattern.svg')] bg-center bg-cover bg-no-repeat">
+      <HomepageLayout>
+        <HeroSection />
+        <ListSosmedHorizontal />
+        <ContactSection />
+      </HomepageLayout>
     </div>
-  )
-}
+  );
+};
 
-export default Home
+export default Home;
