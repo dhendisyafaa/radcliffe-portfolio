@@ -1,0 +1,32 @@
+[
+  {
+    "title": "Raporku",
+    "description": "An application that helps facilitate the education process, enhances transparency, inspires students to achieve better results, and facilitates better decision-making in the school environment.",
+    "url": "",
+    "repository": "https://github.com/dhendisyafaa/raporku_web_client",
+    "stack": [
+      "Next JS",
+      "Tanstack Query",
+      "Tanstack Table",
+      "Tailwind CSS",
+      "Shadcn UI",
+      "Tremor"
+    ],
+    "start": "Okt 2023",
+    "end": "Des 2023"
+  },
+  {
+    "title": "Svara Mart",
+    "description": "E-commerce website for Svara Inovasi Indonesia",
+    "url": "https://woocommerce.svara.id/",
+    "repository": "private",
+    "stack": [
+      "Wordpress + WooCommerce",
+      "Next JS",
+      "Tailwind CSS",
+      "Tanstack Query"
+    ],
+    "start": "Feb 2023",
+    "end": "Jun 2023"
+  }
+]
