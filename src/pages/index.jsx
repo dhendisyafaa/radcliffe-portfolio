@@ -2,7 +2,6 @@ import ContactSection from "@/components/homepage/ContactSection";
 import HeroSection from "@/components/homepage/HeroSection";
 import HomepageLayout from "@/components/homepage/HomepageLayout";
 import { ListSosmedHorizontal } from "@/components/homepage/ListSosmedComponent";
-import Link from "next/link";
 
 const Home = () => {
   return (

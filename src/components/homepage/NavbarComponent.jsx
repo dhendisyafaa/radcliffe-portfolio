@@ -11,37 +11,43 @@ const NavbarComponent = () => {
 
   return (
     <div
-      className={cn(
-        "flex justify-between items-center p-3 fixed top-0 w-full z-50",
-        scrollPosition > 5 && pathname !== "/"
-          ? "bg-white/5 backdrop-blur-md duration-300"
-          : "bg-transparent"
-      )}
+      className={
+        "bg-transparent flex justify-between items-center p-3 fixed top-0 w-full z-50"
+      }
     >
       {pathname !== "/" && (
         <Button
-          variant="ghost"
-          className="text-primary flex items-center gap-2 p-2"
+          className={cn(
+            "flex items-center gap-2 p-2 text-white hover:bg-black/90",
+            scrollPosition > 0 ? "bg-black" : "bg-transparent"
+          )}
           onClick={() => back()}
         >
           <IoChevronBackOutline />
           <p>Back</p>
         </Button>
       )}
-      <div className="flex w-full justify-end">
-        <Button
-          onClick={() =>
-            window.open(
-              "https://mail.google.com/mail/?view=cm&fs=1&to=dhendisyafa@gmail.com",
-              "_blank"
-            )
-          }
-          variant="outline"
-          className="bg-transparent text-white border-white/35 hover:bg-white/20 hover:text-white uppercase"
-        >
-          dhendisyafa@gmail.com
-        </Button>
-      </div>
+      {pathname != "/dhensjournal/blog/[title]" ? (
+        <div className="flex w-full justify-end">
+          <Button
+            onClick={() =>
+              window.open(
+                "https://mail.google.com/mail/?view=cm&fs=1&to=dhendisyafa@gmail.com",
+                "_blank"
+              )
+            }
+            variant="outline"
+            className={cn(
+              "text-white border-white/35 hover:bg-white/20 hover:text-white uppercase",
+              scrollPosition > 5
+                ? "bg-white/5 backdrop-blur-md duration-300"
+                : "bg-transparent"
+            )}
+          >
+            dhendisyafa@gmail.com
+          </Button>
+        </div>
+      ) : null}
     </div>
   );
 };
