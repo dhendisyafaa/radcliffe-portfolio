@@ -5,17 +5,17 @@ const SOSMED = [
   {
     title: "Instagram",
     url: "https://www.instagram.com/dhendisyafaa",
-    icon: <FaInstagram className="hover:text-primary" />,
+    icon: <FaInstagram className="hover:text-primary duration-300" />,
   },
   {
     title: "Linkedin",
     url: "www.linkedin.com/in/dhendisyafaa",
-    icon: <FaLinkedin className="hover:text-primary" />,
+    icon: <FaLinkedin className="hover:text-primary duration-300" />,
   },
   {
     title: "Github",
     url: "https://github.com/dhendisyafaa",
-    icon: <FaGithub className="hover:text-primary" />,
+    icon: <FaGithub className="hover:text-primary duration-300" />,
   },
 ];
 

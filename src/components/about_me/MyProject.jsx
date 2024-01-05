@@ -26,11 +26,11 @@ const MyProject = () => {
           return (
             <Card
               key={index}
-              className="bg-black flex flex-col justify-between hover:border hover:border-primary duration-300 group"
+              className="dark flex flex-col justify-between hover:border-primary duration-300 group"
             >
               <CardHeader className="grid grid-cols-[1fr_110px] items-start gap-4 space-y-0">
                 <div className="space-y-1">
-                  <CardTitle className="text-white group-hover:text-primary">
+                  <CardTitle className="text-white group-hover:text-primary duration-300">
                     {item.title}
                   </CardTitle>
                   <CardDescription>{item.description}</CardDescription>
