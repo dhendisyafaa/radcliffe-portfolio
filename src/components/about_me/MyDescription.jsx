@@ -6,7 +6,7 @@ const MyDescription = () => {
     <section className="w-full min-h-screen flex items-center">
       <div className="w-full">
         <TitleSection title={"Me"} description={"About me in a nutshell"} />
-        <div className="w-[90%]">
+        <div className="w-full md:w-[80%]">
           <p className="font-semibold text-2xl text-white">
             Hello! My name{" "}
             <span className="text-primary font-semibold">

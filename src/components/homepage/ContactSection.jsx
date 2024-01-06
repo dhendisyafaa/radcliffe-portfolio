@@ -1,8 +1,3 @@
-import React from "react";
-import TitleSection from "./TitleSection";
-import * as z from "zod";
-import { zodResolver } from "@hookform/resolvers/zod";
-import { useForm } from "react-hook-form";
 import { Button } from "@/components/ui/button";
 import {
   Form,
@@ -14,26 +9,63 @@ import {
   FormMessage,
 } from "@/components/ui/form";
 import { Input } from "@/components/ui/input";
+import { useCreateContact } from "@/pages/api/resolvers/contactResolver";
+import { zodResolver } from "@hookform/resolvers/zod";
+import { useState } from "react";
+import { useForm } from "react-hook-form";
+import * as z from "zod";
+import LoadingOval from "../common/loader/LoadingOval";
 import { Textarea } from "../ui/textarea";
+import { useToast } from "../ui/use-toast";
+import TitleSection from "./TitleSection";
 
 const ContactSection = () => {
+  const [loadingButton, setloadingButton] = useState(false);
+  const { mutateAsync: createContact, isSuccess } = useCreateContact();
+  const { toast } = useToast();
+
   const formSchema = z.object({
-    company_name: z.string().min(2).max(50),
-    message: z.string().min(2),
+    company_name: z
+      .string()
+      .min(2, { message: "This field has to be filled." })
+      .max(50),
+    company_email: z
+      .string()
+      .min(2, { message: "This field has to be filled." })
+      .email("This is not a valid email."),
+    message: z.string().min(2, { message: "This field has to be filled." }),
   });
 
   const form = useForm({
     resolver: zodResolver(formSchema),
     defaultValues: {
       company_name: "",
+      company_email: "",
       message: "",
     },
   });
 
-  function onSubmit(values) {
-    // Do something with the form values.
-    // ✅ This will be type-safe and validated.
-    console.log(values);
+  async function onSubmit(values) {
+    try {
+      setloadingButton(true);
+      await createContact(values);
+      setloadingButton(false);
+      toast({
+        title: "Your message saved successfully",
+        description: "I will reply to your message via email ASAP!",
+      });
+      form.reset();
+    } catch (error) {
+      setloadingButton(false);
+      console.log("error", error);
+      if (error.response) {
+        toast({
+          variant: "destructive",
+          title: "Uh oh! Something went wrong.",
+          description: "There was a problem with your request.",
+        });
+      }
+    }
   }
 
   return (
@@ -50,16 +82,36 @@ const ContactSection = () => {
               name="company_name"
               render={({ field }) => (
                 <FormItem>
-                  <FormLabel>Company Name</FormLabel>
+                  <FormLabel>Your name</FormLabel>
                   <FormControl>
                     <Input
-                      placeholder="Radcliffe Company"
+                      placeholder="Daniel Jacob or Radcliffe Company"
                       className="bg-transparent text-white"
                       {...field}
                     />
                   </FormControl>
                   <FormDescription>
                     Tell me your name or your company name.
+                  </FormDescription>
+                  <FormMessage />
+                </FormItem>
+              )}
+            />
+            <FormField
+              control={form.control}
+              name="company_email"
+              render={({ field }) => (
+                <FormItem>
+                  <FormLabel>Email</FormLabel>
+                  <FormControl>
+                    <Input
+                      placeholder="inforadcliffe@gmail.com"
+                      className="bg-transparent text-white"
+                      {...field}
+                    />
+                  </FormControl>
+                  <FormDescription>
+                    Tell me your email or your company email.
                   </FormDescription>
                   <FormMessage />
                 </FormItem>
@@ -83,7 +135,14 @@ const ContactSection = () => {
                 </FormItem>
               )}
             />
-            <Button type="submit">Submit</Button>
+            <Button
+              type="submit"
+              disabled={loadingButton}
+              className="flex items-center gap-3 w-full md:max-w-fit"
+            >
+              {loadingButton && <LoadingOval />}
+              Submit
+            </Button>
           </form>
         </Form>
       </div>

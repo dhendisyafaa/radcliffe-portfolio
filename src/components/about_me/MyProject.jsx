@@ -15,7 +15,7 @@ import { FaGithub } from "react-icons/fa6";
 
 const MyProject = () => {
   return (
-    <div className="w-full min-h-screen">
+    <div className="w-full min-h-fit">
       <TitleSection
         title={"Projects"}
         description={"Some of my best projects"}
@@ -28,30 +28,38 @@ const MyProject = () => {
               key={index}
               className="dark flex flex-col justify-between hover:border-primary duration-300 group"
             >
-              <CardHeader className="grid grid-cols-[1fr_110px] items-start gap-4 space-y-0">
-                <div className="space-y-1">
+              <CardHeader className="items-start gap-4 space-y-0">
+                <div className="flex w-full justify-between items-center gap-3">
                   <CardTitle className="text-white group-hover:text-primary duration-300">
                     {item.title}
                   </CardTitle>
-                  <CardDescription>{item.description}</CardDescription>
+                  <div className="flex items-center justify-end space-x-3 text-white text-2xl">
+                    {item.repository != "private" && (
+                      <Link
+                        href={item.repository}
+                        rel="noopener noreferrer"
+                        target="_blank"
+                      >
+                        <FaCode className="cursor-pointer group-hover:text-primary duration-300" />
+                      </Link>
+                    )}
+                    {item.url !== "" && (
+                      <Link
+                        href={item.url}
+                        rel="noopener noreferrer"
+                        target="_blank"
+                      >
+                        <PiGlobe className="cursor-pointer group-hover:text-primary duration-300" />
+                      </Link>
+                    )}
+                  </div>
                 </div>
-                <div className="flex items-center justify-end space-x-3 text-white text-2xl">
-                  {item.repository != "private" && (
-                    <Link href={item.repository}>
-                      <FaCode className="cursor-pointer group-hover:text-primary duration-300" />
-                    </Link>
-                  )}
-                  {item.url !== "" && (
-                    <Link href={item.url}>
-                      <PiGlobe className="cursor-pointer group-hover:text-primary duration-300" />
-                    </Link>
-                  )}
-                </div>
+                <CardDescription>{item.description}</CardDescription>
               </CardHeader>
               <CardContent>
-                <div className="flex justify-between space-x-4 text-sm text-muted-foreground">
+                <div className="flex justify-between space-x-4 text-xs md:text-sm text-muted-foreground">
                   <div className="flex items-center">{stack.join(" - ")}</div>
-                  <div>
+                  <div className="text-end">
                     {item.start} - {item.end}
                   </div>
                 </div>
