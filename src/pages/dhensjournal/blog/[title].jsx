@@ -9,7 +9,12 @@ import { FiClock } from "react-icons/fi";
 const ContentBlog = () => {
   const { query } = useRouter();
   const { data: journalData, isLoading } = useJournalById(query.id);
-  if (isLoading) return <p className="text-white text-center">Loading...</p>;
+  if (isLoading)
+    return (
+      <p className="w-full h-screen text-primary bg-black flex justify-center items-center text-center">
+        Loading...
+      </p>
+    );
   if (journalData.data === null || journalData.data === undefined) return;
   const journal = journalData?.data[0];
 

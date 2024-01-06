@@ -1,7 +1,7 @@
-import React from "react";
-import { Button } from "../ui/button";
-import Typewriter from "typewriter-effect";
 import { useRouter } from "next/router";
+import Typewriter from "typewriter-effect";
+import HOMEPAGE from "../../constant/homepage.json";
+import { Button } from "../ui/button";
 
 const HeroSection = () => {
   const { push } = useRouter();
@@ -9,18 +9,18 @@ const HeroSection = () => {
     <section className="w-full min-h-screen flex items-center">
       <div className="w-full space-y-6">
         <div>
-          <p className="text-xl md:text-2xl tracking-widest font-semibold text-white">
+          <p className="text-xl md:text-2xl tracking-widest font-semibold text-white uppercase">
             <span className="decoration-primary decoration-4 underline">
-              DHENDI
+              {HOMEPAGE.firstname}
             </span>{" "}
-            SYAFA ATHALLAH PUTRA
+            {HOMEPAGE.lastname}
           </p>
           <div className="md:flex gap-4 text-white text-6xl md:text-8xl font-bold my-3">
             <p className="">I&apos;m the </p>
             <div className="text-primary">
               <Typewriter
                 options={{
-                  strings: ["Student", "Builder"],
+                  strings: HOMEPAGE.typewriter,
                   autoStart: true,
                   loop: true,
                 }}
@@ -28,11 +28,10 @@ const HeroSection = () => {
             </div>
           </div>
           <p className="text-gray-400 font-semibold text-base md:text-lg">
-            Hi there! good to see you here. I&apos;m a student who loves to
-            build things.
+            {HOMEPAGE.description}
           </p>
         </div>
-        <Button onClick={() => push("/me")}>About Me</Button>
+        <Button onClick={() => push("/me")}>{HOMEPAGE.button}</Button>
       </div>
     </section>
   );

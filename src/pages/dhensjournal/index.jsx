@@ -6,10 +6,6 @@ const Dhensjournal = () => {
     <>
       <HeroParallaxEffect />
       <BlogSection />
-      {/* <div className="container">
-        <PotterHead />
-        <Photography />
-      </div> */}
     </>
   );
 };

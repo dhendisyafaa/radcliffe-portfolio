@@ -3,6 +3,7 @@ import CardBlog from "./CardBlog";
 import TitleSection from "@/components/homepage/TitleSection";
 import { useAllJournal } from "@/pages/api/resolvers/journalResolver";
 import supabase from "supabase";
+import SkeletonCardBlog from "@/components/common/skeleton/SkeletonCardBlog";
 
 const BlogSection = () => {
   const { data: journals, isLoading } = useAllJournal();
@@ -14,8 +15,13 @@ const BlogSection = () => {
         title={"Dhensjournal"}
         description={"Want to get closer to me?"}
       />
-      <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-3 min-h-screen place-items-start place-content-start">
-        {isLoading && <p className="text-white text-center">Loading...</p>}
+      <div className="flex flex-col md:grid md:grid-cols-2 lg:grid-cols-3 gap-3 min-h-screen place-items-start place-content-start">
+        {isLoading &&
+          Array(3)
+            .fill(" ")
+            .map((item, i) => {
+              return <SkeletonCardBlog key={i} />;
+            })}
         {journal?.map((item) => (
           <CardBlog key={item.id} journal={item} />
         ))}

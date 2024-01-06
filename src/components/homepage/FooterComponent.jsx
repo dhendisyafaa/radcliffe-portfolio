@@ -4,7 +4,7 @@ const FooterComponent = () => {
   const date = new Date();
   const year = date.getFullYear();
   return (
-    <footer className="w-full py-6">
+    <footer className="w-full py-6 mt-12">
       <div className="flex items-center justify-center gap-2 text-white">
         <FaRegCopyright />
         <p>

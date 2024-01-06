@@ -16,6 +16,15 @@
     "end": "Des 2023"
   },
   {
+    "title": "Quizzify | Seberapa Jenius Sih Kamu?",
+    "description": "An interactive website that provides random quizzes in Bahasa Indonesia. Users can enjoy a variety of questions from various topics, with a user-friendly interface making it suitable for all.",
+    "url": "https://random-quiz-web-client.vercel.app/",
+    "repository": "private",
+    "stack": ["React JS", "Tailwind CSS"],
+    "start": "November 21, 2023",
+    "end": "November 23, 2023"
+  },
+  {
     "title": "Svara Mart",
     "description": "E-commerce website for Svara Inovasi Indonesia",
     "url": "https://woocommerce.svara.id/",

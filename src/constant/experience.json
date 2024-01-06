@@ -1,0 +1,20 @@
+[
+  {
+    "job_title": "Frontend Developer",
+    "job_type": "Intership",
+    "company": "PT Svara Inovasi Indonesia (SVARA)",
+    "location": "Bandung, West Java, Indonesia",
+    "logo": "https://media.licdn.com/dms/image/D560BAQH_4rAlHUZtQw/company-logo_100_100/0/1664333669338/svara_inovasi_indonesia_logo?e=1712793600&v=beta&t=gRvA7fLHpz2fP5JEpD5ECzdGAnYWHW_6_h7Qfxcn39Y",
+    "start": "Jan 2023",
+    "end": "Jun 2023",
+    "skills": [
+      "Next JS",
+      "REST APIs",
+      "WooCommerce",
+      "Xendit",
+      "Tailwind CSS",
+      "React JS",
+      "GitHub"
+    ]
+  }
+]

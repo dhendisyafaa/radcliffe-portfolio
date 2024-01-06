@@ -6,6 +6,7 @@ import "../styles/globals.css";
 import { useState } from "react";
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 import { ReactQueryDevtools } from "@tanstack/react-query-devtools";
+import { Toaster } from "@/components/ui/toaster";
 
 function MyApp({ Component, pageProps }) {
   const router = useRouter();
@@ -53,6 +54,7 @@ function MyApp({ Component, pageProps }) {
               }}
             >
               <ReactQueryDevtools initialIsOpen={false} />
+              <Toaster />
               <Component {...pageProps} />
             </motion.div>
           </AnimatePresence>

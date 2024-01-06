@@ -54,7 +54,6 @@ const HeroParallaxEffect = () => {
           backgroundSize: "cover",
           y: backgroundY,
           scale: backgroundScale,
-          // backgroundColor: "salmon",
         }}
       />
       <motion.div
@@ -65,8 +64,10 @@ const HeroParallaxEffect = () => {
           opacity: textOpacity,
         }}
       >
-        <p className="font-black text-5xl">DHENSJOURNAL</p>
-        <span className="font-bold text-xl">Journals of my life</span>
+        <p className="font-black text-3xl md:text-5xl">DHENSJOURNAL</p>
+        <span className="font-bold text-lg md:text-xl">
+          Journals of my life
+        </span>
       </motion.div>
       <motion.div
         className="absolute inset-52 z-20"
