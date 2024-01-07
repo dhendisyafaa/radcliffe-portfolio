@@ -9,7 +9,7 @@ const SOSMED = [
   },
   {
     title: "Linkedin",
-    url: "www.linkedin.com/in/dhendisyafaa",
+    url: "https://www.linkedin.com/in/dhendisyafaa",
     icon: <FaLinkedin className="hover:text-primary duration-300" />,
   },
   {
