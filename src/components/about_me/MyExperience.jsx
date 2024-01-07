@@ -9,6 +9,13 @@ import {
 } from "../ui/card";
 import EXPERIENCE from "../../constant/experience.json";
 import Image from "next/image";
+import Link from "next/link";
+import {
+  Tooltip,
+  TooltipContent,
+  TooltipProvider,
+  TooltipTrigger,
+} from "../ui/tooltip";
 
 const MyExperience = () => {
   return (
@@ -27,13 +34,24 @@ const MyExperience = () => {
                   <CardTitle className="text-white group-hover:text-primary duration-300">
                     {item.job_title} | {item.job_type}
                   </CardTitle>
-                  <Image
-                    src={item.logo}
-                    width={40}
-                    height={40}
-                    alt={`logo_${item.company}`}
-                    className="rounded-md"
-                  />
+                  <TooltipProvider>
+                    <Tooltip>
+                      <TooltipTrigger>
+                        <Link href={item.company_website}>
+                          <Image
+                            src={item.logo}
+                            width={40}
+                            height={40}
+                            alt={`logo_${item.company}`}
+                            className="rounded-md"
+                          />
+                        </Link>
+                      </TooltipTrigger>
+                      <TooltipContent>
+                        <p>{`Go to ${item.company}'s website`}</p>
+                      </TooltipContent>
+                    </Tooltip>
+                  </TooltipProvider>
                 </div>
                 <CardDescription>
                   {item.company} <br /> {item.location}
