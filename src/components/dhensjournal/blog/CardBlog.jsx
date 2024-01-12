@@ -16,7 +16,9 @@ const CardBlog = ({ journal }) => {
 
   return (
     <Link
-      href={`/dhensjournal/blog/${encodeURIComponent(title)}?id=${journal.id}`}
+      href={`/dhensjournal/journal/${encodeURIComponent(title)}?id=${
+        journal.id
+      }`}
     >
       <Card className="dark flex flex-col justify-between hover:border-primary duration-300 group cursor-pointer min-h-80">
         <CardHeader>
@@ -29,7 +31,11 @@ const CardBlog = ({ journal }) => {
               {`${decodeURIComponent(title)}`}
             </CardTitle>
             <CardDescription className="leading-6">
-              {journal.short_description}
+              <p
+                dangerouslySetInnerHTML={{
+                  __html: journal?.short_description,
+                }}
+              />
             </CardDescription>
           </div>
         </CardHeader>

@@ -11,7 +11,7 @@ const getJournalById = (id) => {
 };
 
 const createJournal = (data) => {
-  return axios.post(`${baseUrlApi}/journals/`, data);
+  return supabase.from("Journal").insert([data]).select();
 };
 
 const updateJournal = (id, data) => {

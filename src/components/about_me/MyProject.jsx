@@ -29,7 +29,7 @@ const MyProject = () => {
               className="dark flex flex-col justify-between hover:border-primary duration-300 group"
             >
               <CardHeader className="items-start gap-4 space-y-0">
-                <div className="flex w-full justify-between items-center gap-3">
+                <div className="flex w-full justify-between items-start gap-3">
                   <CardTitle className="text-white group-hover:text-primary duration-300">
                     {item.title}
                   </CardTitle>

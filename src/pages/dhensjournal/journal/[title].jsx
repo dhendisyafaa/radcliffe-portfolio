@@ -31,9 +31,12 @@ const ContentBlog = () => {
               <p className="text-white text-2xl md:text-5xl font-bold">{`${decodeURIComponent(
                 journal?.title
               )}`}</p>
-              <p className="text-zinc-500 text-sm md:text-lg font-medium">
-                {journal?.short_description}
-              </p>
+              <div
+                className="text-zinc-500 text-sm md:text-lg font-medium"
+                dangerouslySetInnerHTML={{
+                  __html: journal?.short_description,
+                }}
+              />
               <p className="text-zinc-500 text-sm md:text-base font-medium">
                 <span className="text-primary">Author:</span> {journal?.author}
               </p>
@@ -48,9 +51,12 @@ const ContentBlog = () => {
               </div>
             </div>
           </div>
-          <div className="min-h-screen w-full md:px-6 mb-12 text-white/90 text-lg leading-8 tracking-wide">
-            {journal?.content}
-          </div>
+          <div
+            className="min-h-screen w-full md:px-6 mb-12 text-white/90 text-lg leading-8 tracking-wide"
+            dangerouslySetInnerHTML={{
+              __html: journal?.content,
+            }}
+          />
         </div>
       </HomepageLayout>
     </article>

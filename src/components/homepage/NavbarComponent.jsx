@@ -27,7 +27,7 @@ const NavbarComponent = () => {
           <p>Back</p>
         </Button>
       )}
-      {pathname != "/dhensjournal/blog/[title]" ? (
+      {pathname != "/dhensjournal/journal/[title]" ? (
         <div className="flex w-full justify-end">
           <Button
             onClick={() =>
