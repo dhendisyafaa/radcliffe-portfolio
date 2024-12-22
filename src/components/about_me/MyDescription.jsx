@@ -26,7 +26,7 @@ const MyDescription = () => {
             </span>
           </p>
         </div>
-        <div className="absolute text-primary font-bold underline p-1">
+        <div className="absolute text-primary font-bold underline pt-1 pr-1">
           <span class="animate-ping absolute top-1 right-0 inline-flex h-2 w-2 rounded-full bg-primary opacity-75"></span>
           <Link href={"/dhensjournal"}>Still curious about me?</Link>
         </div>

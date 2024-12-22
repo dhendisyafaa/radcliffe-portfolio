@@ -39,7 +39,7 @@ const MyProject = () => {
                         href={item.repository}
                         rel="noopener noreferrer"
                         target="_blank"
-                        className="border p-1 rounded-lg group-hover:bg-black/40 hover:scale-110 duration-300"
+                        className="border group-hover:border-primary p-1 rounded-lg group-hover:bg-black/40 hover:scale-110 duration-300"
                       >
                         <FaCode className="cursor-pointer group-hover:text-primary duration-300" />
                       </Link>
@@ -49,7 +49,7 @@ const MyProject = () => {
                         href={item.url}
                         rel="noopener noreferrer"
                         target="_blank"
-                        className="border p-1 rounded-lg group-hover:bg-black/40 hover:scale-110 duration-300"
+                        className="border group-hover:border-primary p-1 rounded-lg group-hover:bg-black/40 hover:scale-110 duration-300"
                       >
                         <PiGlobe className="cursor-pointer group-hover:text-primary duration-300" />
                       </Link>
