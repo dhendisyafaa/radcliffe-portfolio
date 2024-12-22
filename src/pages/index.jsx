@@ -2,7 +2,6 @@ import ContactSection from "@/components/homepage/ContactSection";
 import HeroSection from "@/components/homepage/HeroSection";
 import HomepageLayout from "@/components/homepage/HomepageLayout";
 import { ListSosmedHorizontal } from "@/components/homepage/ListSosmedComponent";
-import { useDataProfile } from "./api/resolvers/linkedinResolver";
 
 const Home = () => {
   return (
