@@ -1,11 +1,22 @@
 [
   {
     "job_title": "Frontend Developer",
+    "job_type": "Volunteer",
+    "company": "Shape Your Life ID",
+    "company_website": "https://shapeyourlifeid.com/",
+    "location": "WFH",
+    "logo": "/photos/logo/syl.jpg",
+    "start": "April 2024",
+    "end": "Present",
+    "skills": ["HTML", "CSS", "Saas", "Next JS", "Laravel"]
+  },
+  {
+    "job_title": "Frontend Developer",
     "job_type": "Intership",
     "company": "PT Svara Inovasi Indonesia (SVARA)",
     "company_website": "https://svara.id/",
     "location": "Bandung, West Java, Indonesia",
-    "logo": "https://media.licdn.com/dms/image/D560BAQH_4rAlHUZtQw/company-logo_100_100/0/1664333669338/svara_inovasi_indonesia_logo?e=1712793600&v=beta&t=gRvA7fLHpz2fP5JEpD5ECzdGAnYWHW_6_h7Qfxcn39Y",
+    "logo": "/photos/logo/svara.jpg",
     "start": "Jan 2023",
     "end": "Jun 2023",
     "skills": [

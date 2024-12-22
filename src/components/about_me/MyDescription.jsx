@@ -8,25 +8,26 @@ const MyDescription = () => {
         <TitleSection title={"Me"} description={"About me in a nutshell"} />
         <div className="w-full md:w-[80%]">
           <p className="font-semibold text-2xl text-white">
-            Hello! My name{" "}
+            Hello! I&apos;m{" "}
             <span className="text-primary font-semibold">
               Dhendi Syafa Athallah Putra
             </span>
-            , a vocational high school boy who is trying to dive into the world
-            of technology
+            , a software developer with a focus on web technology development.
           </p>
           <p className="text-gray-200 mt-3">
-            I am a vocational student majoring in{" "}
+            With a background in{" "}
             <span className="text-primary font-semibold">
-              Software Engineering.
+              Computer Science Education
             </span>{" "}
-            Starting from watching a Korean drama{" "}
-            <span className="text-primary font-semibold">Start Up</span> that
-            made me curious about programming, and now I am interested in
-            becoming a Web Developer.
+            and always striving to create innovative solutions that have a
+            positive impact. I must continue to hone my skills to become a{" "}
+            <span className="text-primary font-semibold">
+              useful developer.
+            </span>
           </p>
         </div>
-        <div className="text-primary font-bold underline">
+        <div className="absolute text-primary font-bold underline p-1">
+          <span class="animate-ping absolute top-1 right-0 inline-flex h-2 w-2 rounded-full bg-primary opacity-75"></span>
           <Link href={"/dhensjournal"}>Still curious about me?</Link>
         </div>
       </div>

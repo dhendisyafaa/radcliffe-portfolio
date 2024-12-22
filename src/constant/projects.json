@@ -1,5 +1,23 @@
 [
   {
+    "title": "Shape Your Life ID",
+    "description": "A website that provides information on scholarships and study abroad.",
+    "url": "https://shapeyourlifeid.com/",
+    "repository": "private",
+    "stack": ["HTML", "CSS", "SaaS", "Bootstrap"],
+    "start": "April 2024",
+    "end": "Present"
+  },
+  {
+    "title": "Viruspace",
+    "description": "An educational website that provides materials to learn about various viruses, and how to prevent them so that humans are more vigilant.",
+    "url": "https://viruspace.vercel.app/",
+    "repository": "https://github.com/dhendisyafaa/viruspace-client",
+    "stack": ["Next JS", "Shadcn UI"],
+    "start": "Nov 2024",
+    "end": "Des 2024"
+  },
+  {
     "title": "Raporku",
     "description": "An application that helps facilitate the education process, enhances transparency, inspires students to achieve better results, and facilitates better decision-making in the school environment.",
     "url": "",
@@ -35,6 +53,15 @@
       "Tailwind CSS",
       "Tanstack Query"
     ],
+    "start": "Feb 2023",
+    "end": "Jun 2023"
+  },
+  {
+    "title": "Avenir Tech Company",
+    "description": "an Avenir Tech Company profile website",
+    "url": "https://dhendisyafaa.github.io/avenirtechcompany/",
+    "repository": "https://github.com/dhendisyafaa/avenirtechcompany",
+    "stack": ["HTML", "CSS", "Bootstrap"],
     "start": "Feb 2023",
     "end": "Jun 2023"
   }

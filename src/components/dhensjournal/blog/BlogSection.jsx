@@ -15,17 +15,23 @@ const BlogSection = () => {
         title={"Dhensjournal"}
         description={"Want to get closer to me?"}
       />
-      <div className="flex flex-col md:grid md:grid-cols-2 lg:grid-cols-3 gap-3 min-h-screen place-items-start place-content-start">
-        {isLoading &&
-          Array(3)
-            .fill(" ")
-            .map((item, i) => {
-              return <SkeletonCardBlog key={i} />;
-            })}
-        {journal?.map((item) => (
-          <CardBlog key={item.id} journal={item} />
-        ))}
-      </div>
+      {journal ? (
+        <div className="flex flex-col md:grid md:grid-cols-2 lg:grid-cols-3 gap-3 min-h-screen place-items-start place-content-start">
+          {isLoading &&
+            Array(3)
+              .fill(" ")
+              .map((item, i) => {
+                return <SkeletonCardBlog key={i} />;
+              })}
+          {journal?.map((item) => (
+            <CardBlog key={item.id} journal={item} />
+          ))}
+        </div>
+      ) : (
+        <p className="text-center text-primary">
+          Sorry, for a while I deleted my journal collection
+        </p>
+      )}
     </div>
   );
 };

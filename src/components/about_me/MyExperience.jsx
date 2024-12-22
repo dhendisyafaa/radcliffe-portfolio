@@ -37,7 +37,11 @@ const MyExperience = () => {
                   <TooltipProvider>
                     <Tooltip>
                       <TooltipTrigger>
-                        <Link href={item.company_website}>
+                        <Link
+                          href={item.company_website}
+                          rel="noopener noreferrer"
+                          target="_blank"
+                        >
                           <Image
                             src={item.logo}
                             width={40}

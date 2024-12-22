@@ -17,7 +17,12 @@ const MyAchievment = () => {
       <div className="grid md:grid-cols-2 gap-3">
         {ACHIEVMENT.map((item, index) => {
           return (
-            <Link key={index} href={item.url_credential}>
+            <Link
+              key={index}
+              href={item.url_credential}
+              rel="noopener noreferrer"
+              target="_blank"
+            >
               <Card className="dark flex flex-col justify-between hover:border-primary duration-300 group min-h-48">
                 <CardHeader className="items-start gap-4 space-y-0">
                   <div className="flex w-full justify-between items-center gap-3">

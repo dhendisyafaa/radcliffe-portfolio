@@ -1,17 +1,26 @@
-@import url('https://fonts.googleapis.com/css2?family=Figtree:wght@400;500;600;700;800&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Figtree:wght@400;500;600;700;800&display=swap");
 
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
-
 * {
-  font-family: 'Figtree', sans-serif;
+  font-family: "Figtree", sans-serif;
   box-sizing: border-box;
 }
 
 body {
   background: #000;
+}
+
+.bg-hover:hover {
+  background-image: radial-gradient(
+    circle at 75% 20%,
+    rgba(169, 71, 0, 0.358),
+    rgba(249, 116, 22, 0.144) 20%,
+    transparent,
+    transparent
+  );
 }
 
 @layer base {
