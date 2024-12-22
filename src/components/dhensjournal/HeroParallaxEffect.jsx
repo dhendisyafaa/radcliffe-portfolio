@@ -65,8 +65,8 @@ const HeroParallaxEffect = () => {
         }}
       >
         <p className="font-black text-3xl md:text-5xl">DHENSJOURNAL</p>
-        <span className="font-bold text-lg md:text-xl">
-          Journals of my life
+        <span className="font-extrabold text-lg md:text-xl uppercase">
+          Journal of my life
         </span>
       </motion.div>
       <motion.div
