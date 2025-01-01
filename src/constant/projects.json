@@ -58,11 +58,11 @@
   },
   {
     "title": "Avenir Tech Company",
-    "description": "an Avenir Tech Company profile website",
+    "description": "Avenir Tech Company profile website",
     "url": "https://dhendisyafaa.github.io/avenirtechcompany/",
     "repository": "https://github.com/dhendisyafaa/avenirtechcompany",
     "stack": ["HTML", "CSS", "Bootstrap"],
-    "start": "Feb 2023",
-    "end": "Jun 2023"
+    "start": "March 2022",
+    "end": "Des 2022"
   }
 ]
