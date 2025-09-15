@@ -9,6 +9,15 @@
     "end": "Present"
   },
   {
+    "title": "Histobandung",
+    "description": "An educational website that provides materials to learn about the history of Bandung City, including historical buildings, fun facts, and old photographs to preserve cultural heritage.",
+    "url": "https://histobandung.vercel.app/",
+    "repository": "https://github.com/dhendisyafaa/histobandung",
+    "stack": ["Next JS", "Shadcn UI", "Tailwind CSS", "EmailJS"],
+    "start": "Sep 2025",
+    "end": "Sep 2025"
+  },
+  {
     "title": "Viruspace",
     "description": "An educational website that provides materials to learn about various viruses, and how to prevent them so that humans are more vigilant.",
     "url": "https://viruspace.vercel.app/",
