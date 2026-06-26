@@ -7,7 +7,7 @@ import {
   CardHeader,
   CardTitle,
 } from "@/components/ui/card";
-import { X, Play } from "lucide-react";
+import { X, Play, ExternalLink } from "lucide-react";
 import FILM_PROJECTS from "../../constant/film_projects.json";
 import TitleSection from "../homepage/TitleSection";
 import Image from "next/image";
