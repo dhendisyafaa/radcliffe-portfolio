@@ -1,0 +1,29 @@
+{
+  "title": "Skills & Abilities",
+  "description": "Tools, frameworks & technologies I work with",
+  "categories": [
+    {
+      "label": "Frontend",
+      "items": ["React", "Next.js", "Tailwind CSS", "Shadcn UI"]
+    },
+    {
+      "label": "Backend",
+      "items": ["Node.js", "Hono.js", "REST APIs", "Laravel"]
+    },
+    {
+      "label": "Database & Cloud",
+      "items": ["Supabase", "PostgreSQL", "MySQL"]
+    },
+    {
+      "label": "Tools & Workflow",
+      "items": [
+        "Git & GitHub",
+        "Figma",
+        "VS Code",
+        "Postman",
+        "Sentry",
+        "PostHog"
+      ]
+    }
+  ]
+}

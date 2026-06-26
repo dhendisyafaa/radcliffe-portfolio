@@ -1,11 +1,20 @@
 [
   {
+    "title": "Framic",
+    "description": "A marketplace platform and booking management of curated professional photographers.",
+    "url": "https://www.framic.my.id/",
+    "repository": "https://github.com/dhendisyafaa/framic",
+    "stack": ["Next JS", "Hono JS", "Resend", "Clerk"],
+    "start": "Feb 2026",
+    "end": "Jul 2026"
+  },
+  {
     "title": "Shape Your Life ID",
     "description": "A website that provides information on scholarships and study abroad.",
     "url": "https://shapeyourlifeid.com/",
     "repository": "private",
     "stack": ["HTML", "CSS", "SaaS", "Bootstrap"],
-    "start": "April 2024",
+    "start": "Apr 2024",
     "end": "Present"
   },
   {
@@ -48,8 +57,8 @@
     "url": "https://random-quiz-web-client.vercel.app/",
     "repository": "private",
     "stack": ["React JS", "Tailwind CSS"],
-    "start": "November 21, 2023",
-    "end": "November 23, 2023"
+    "start": "Nov 21, 2023",
+    "end": "Nov 23, 2023"
   },
   {
     "title": "Svara Mart",

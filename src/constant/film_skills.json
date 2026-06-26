@@ -1,0 +1,32 @@
+{
+  "title": "Roles & Capabilities",
+  "description": "Positions & expertise in film production",
+  "categories": [
+    {
+      "label": "Production",
+      "items": ["Director"]
+    },
+    {
+      "label": "Camera & Lighting",
+      "items": ["Director of Photography", "Camera Operator"]
+    },
+    {
+      "label": "Artistic",
+      "items": ["Art Director", "Set Dresser", "Props Builder", "Props Buyer"]
+    },
+    {
+      "label": "Post-Production",
+      "items": ["Video Editor", "Colorist", "Sound Design"]
+    },
+    {
+      "label": "Tools",
+      "items": [
+        "DaVinci Resolve",
+        "Capcut",
+        "After Effects",
+        "Blender",
+        "Bandlab"
+      ]
+    }
+  ]
+}

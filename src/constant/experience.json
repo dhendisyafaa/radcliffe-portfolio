@@ -1,5 +1,22 @@
 [
   {
+    "job_title": "Head of Web Development",
+    "job_type": "Volunteer",
+    "company": "Shape Your Life ID",
+    "company_website": "https://shapeyourlifeid.com/",
+    "location": "WFH",
+    "logo": "/photos/logo/syl.jpg",
+    "start": "April 2025",
+    "end": "November 2025",
+    "skills": [
+      "Architecture Design",
+      "Management",
+      "Recruitment",
+      "Team Building",
+      "Leadership"
+    ]
+  },
+  {
     "job_title": "Frontend Developer",
     "job_type": "Volunteer",
     "company": "Shape Your Life ID",
@@ -7,7 +24,7 @@
     "location": "WFH",
     "logo": "/photos/logo/syl.jpg",
     "start": "April 2024",
-    "end": "Present",
+    "end": "April 2025",
     "skills": ["HTML", "CSS", "Saas", "Next JS", "Laravel"]
   },
   {
