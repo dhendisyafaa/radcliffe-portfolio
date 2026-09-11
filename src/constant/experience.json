@@ -1,13 +1,24 @@
 [
   {
     "job_title": "Head of Web Development",
+    "job_type": "Committee",
+    "company": "DINAMIK21",
+    "company_website": "https://dinamik.kemakom.org/",
+    "location": "Campus",
+    "logo": "/photos/logo/dinamik-logo.jpg",
+    "start": "Sept 2026",
+    "end": "Nov 2026",
+    "skills": ["Leadership", "Recruitment", "Team Management"]
+  },
+  {
+    "job_title": "Head of Web Development",
     "job_type": "Volunteer",
     "company": "Shape Your Life ID",
     "company_website": "https://shapeyourlifeid.com/",
     "location": "WFH",
     "logo": "/photos/logo/syl.jpg",
-    "start": "April 2025",
-    "end": "November 2025",
+    "start": "Apr 2025",
+    "end": "Nov 2025",
     "skills": [
       "Architecture Design",
       "Management",
@@ -17,14 +28,31 @@
     ]
   },
   {
+    "job_title": "Head of Web Development",
+    "job_type": "Committee",
+    "company": "Viruspace",
+    "company_website": "https://viruspace.vercel.app/",
+    "location": "Campus",
+    "logo": "/photos/logo/viruspace-logo.jpg",
+    "start": "Nov 2024",
+    "end": "Des 2024",
+    "skills": [
+      "Team Management",
+      "Leadership",
+      "Gamification",
+      "Learning Media",
+      "Educational Games"
+    ]
+  },
+  {
     "job_title": "Frontend Developer",
     "job_type": "Volunteer",
     "company": "Shape Your Life ID",
     "company_website": "https://shapeyourlifeid.com/",
     "location": "WFH",
     "logo": "/photos/logo/syl.jpg",
-    "start": "April 2024",
-    "end": "April 2025",
+    "start": "Apr 2024",
+    "end": "Apr 2025",
     "skills": ["HTML", "CSS", "Saas", "Next JS", "Laravel"]
   },
   {
