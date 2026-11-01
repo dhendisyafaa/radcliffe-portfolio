@@ -2,7 +2,7 @@ import TitleSection from "../homepage/TitleSection";
 
 const MyDescription = () => {
   return (
-    <section className="w-full min-h-screen flex items-center">
+    <section className="w-full min-h-[60vh] mt-20 flex items-center">
       <div className="w-full">
         <TitleSection title={"Me"} description={"About me in a nutshell"} />
         <div className="w-full md:w-[80%]">
