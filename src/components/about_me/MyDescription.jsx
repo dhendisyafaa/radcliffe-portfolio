@@ -26,6 +26,13 @@ const MyDescription = () => {
               code, design, and storytelling.
             </span>
           </p>
+          <a
+            href="/assets/CURRICULUM%20VITAE%20-%20DHENDI%20SYAFA%20ATHALLAH%20PUTRA.pdf"
+            download="CURRICULUM VITAE - DHENDI SYAFA ATHALLAH PUTRA"
+            className="inline-block mt-6 rounded-md bg-primary px-3 py-2 font-semibold text-white transition-opacity hover:opacity-80"
+          >
+            Download CV
+          </a>
         </div>
       </div>
     </section>
