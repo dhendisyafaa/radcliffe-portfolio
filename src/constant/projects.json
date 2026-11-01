@@ -1,5 +1,14 @@
 [
   {
+    "title": "Dinamik 21 - Level Up your Skill",
+    "description": "A website for event of exploration of logic, creativity, and future innovation for high school students / vocational school equivalents and students throughout Indonesia.",
+    "url": "https://dinamik.kemakom.org/",
+    "repository": "private",
+    "stack": ["Next JS", "Supabase"],
+    "start": "Oct 2026",
+    "end": "Des 2026"
+  },
+  {
     "title": "Framic",
     "description": "A marketplace platform and booking management of curated professional photographers.",
     "url": "https://www.framic.my.id/",
@@ -15,7 +24,7 @@
     "repository": "private",
     "stack": ["HTML", "CSS", "SaaS", "Bootstrap"],
     "start": "Apr 2024",
-    "end": "Present"
+    "end": "Nov 2025"
   },
   {
     "title": "Histobandung",
@@ -34,6 +43,15 @@
     "stack": ["Next JS", "Shadcn UI"],
     "start": "Nov 2024",
     "end": "Des 2024"
+  },
+  {
+    "title": "Radsnaps",
+    "description": "A social media website for sharing photos and videos, allowing users to connect with friends, family, and communities through visual content.",
+    "url": "",
+    "repository": "https://github.com/dhendisyafaa/radsnaps_web_client",
+    "stack": ["Next JS", "Shadcn UI", "Express JS"],
+    "start": "Jan 2024",
+    "end": "Mar 2024"
   },
   {
     "title": "Raporku",

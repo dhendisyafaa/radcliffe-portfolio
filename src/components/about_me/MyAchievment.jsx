@@ -43,7 +43,8 @@ const MyAchievment = () => {
                   <div className="flex justify-between space-x-4 text-xs md:text-sm text-muted-foreground">
                     <div className="text-end">{item.id_credential}</div>
                     <div>
-                      {item.date_publication} - {item.expiration_date}
+                      {item.date_publication}{" "}
+                      {item.expiration_date ?? `- ${item.expiration_date}`}
                     </div>
                   </div>
                 </CardContent>

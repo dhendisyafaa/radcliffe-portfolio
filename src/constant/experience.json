@@ -7,8 +7,19 @@
     "location": "Campus",
     "logo": "/photos/logo/dinamik-logo.jpg",
     "start": "Sept 2026",
-    "end": "Nov 2026",
+    "end": "Present",
     "skills": ["Leadership", "Recruitment", "Team Management"]
+  },
+  {
+    "job_title": "Head of Education Department",
+    "job_type": "Club",
+    "company": "UKMF Satu Layar",
+    "company_website": "https://www.instagram.com/satulayar/",
+    "location": "Campus",
+    "logo": "/photos/logo/satu-layar-logo.jpg",
+    "start": "Feb 2026",
+    "end": "Present",
+    "skills": ["Pedagogic", "Cadre Development ", "Leadership Development"]
   },
   {
     "job_title": "Head of Web Development",
@@ -26,6 +37,17 @@
       "Team Building",
       "Leadership"
     ]
+  },
+  {
+    "job_title": "Frontend Developer",
+    "job_type": "Committee",
+    "company": "DIVKOMTEKINFO",
+    "company_website": "https://kemakom.org/",
+    "location": "Campus",
+    "logo": "/photos/logo/kemakom-logo.png",
+    "start": "Jan 2025",
+    "end": "Des 2025",
+    "skills": ["Code Igniter", "Laravel", "Game Development"]
   },
   {
     "job_title": "Head of Web Development",

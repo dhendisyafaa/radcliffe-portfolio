@@ -15,6 +15,10 @@
       "items": ["Supabase", "PostgreSQL", "MySQL"]
     },
     {
+      "label": "Infrastructure & System Administration",
+      "items": ["Docker", "Tailscale", "Vercel", "Cloudflare Tunnel"]
+    },
+    {
       "label": "Tools & Workflow",
       "items": [
         "Git & GitHub",
