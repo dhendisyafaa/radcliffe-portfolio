@@ -36,11 +36,7 @@ const MyDescription = () => {
             >
               Download CV
             </a>
-            <Button
-              asChild
-              variant="outline"
-              className="border-white/35 text-white"
-            >
+            <Button asChild variant="outline">
               <Link href="/rate-card">Lihat Rate Card</Link>
             </Button>
           </div>
