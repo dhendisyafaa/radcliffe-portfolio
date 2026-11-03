@@ -1,0 +1,118 @@
+{
+  "title": "Rate Card",
+  "description": "Layanan dan informasi harga",
+  "introduction": "Berikut daftar layanan pengembangan website dan aplikasi yang tersedia. Harga dapat disesuaikan dengan kebutuhan dan kompleksitas proyek.",
+  "serviceCategories": [
+    {
+      "title": "Website Development",
+      "headers": ["Layanan", "Deskripsi", "Harga"],
+      "markedServices": ["Landing Page", "Company Profile"],
+      "rows": [
+        ["Landing Page", "Website promosi satu halaman", "Rp1.500.000"],
+        ["Personal Portfolio", "Website portfolio personal", "Rp2.000.000"],
+        [
+          "Company Profile",
+          "Website profil perusahaan/organisasi",
+          "Rp3.000.000"
+        ],
+        [
+          "Event Website",
+          "Website seminar, kompetisi, atau event",
+          "Rp2.500.000"
+        ],
+        [
+          "Multi-page Website",
+          "Website dengan beberapa halaman",
+          "Rp3.500.000"
+        ]
+      ]
+    },
+    {
+      "title": "Full-Stack Development",
+      "headers": ["Layanan", "Deskripsi", "Harga Mulai"],
+      "markedServices": ["Admin Dashboard"],
+      "rows": [
+        [
+          "Authentication System",
+          "Login, register, dan user management",
+          "Rp1.500.000"
+        ],
+        ["Admin Dashboard", "Dashboard administrasi", "Rp2.000.000"],
+        ["CRUD System", "Create, Read, Update, Delete", "Rp1.500.000"],
+        [
+          "REST API Development",
+          "Pembuatan REST API",
+          "Rp1.500.000"
+        ],
+        [
+          "Database Integration",
+          "Integrasi dan pengelolaan database",
+          "Rp1.000.000"
+        ],
+        [
+          "Full-Stack Web Application",
+          "Aplikasi web dengan frontend dan backend",
+          "Rp6.000.000"
+        ]
+      ]
+    },
+    {
+      "title": "Additional Services",
+      "headers": ["Layanan", "Harga"],
+      "markedServices": [],
+      "rows": [
+        ["Bug Fixing", "Rp75.000/jam"],
+        ["Website Maintenance", "Mulai Rp300.000/bulan"],
+        ["Deployment & Configuration", "Rp300.000"],
+        ["API Integration", "Mulai Rp200.000"],
+        ["Responsive Optimization", "Mulai Rp50.000"],
+        ["Performance Optimization", "Mulai Rp50.000"]
+      ]
+    }
+  ],
+  "technologies": {
+    "title": "Teknologi",
+    "description": "Teknologi yang ditawarkan",
+    "headers": ["Kategori", "Teknologi"],
+    "rows": [
+      ["Frontend", "React.js, Next.js, Tailwind CSS"],
+      ["Backend", "Node.js, Express.js, Laravel"],
+      ["Database", "PostgreSQL, MySQL, Supabase"],
+      ["Mobile", "React Native, Flutter"]
+    ]
+  },
+  "terms": {
+    "title": "Ketentuan Pengerjaan",
+    "description": "Informasi sebelum memulai proyek",
+    "heading": "Ketentuan umum:",
+    "items": [
+      "Harga dapat berubah berdasarkan kompleksitas proyek.",
+      "DP sebesar 50% sebelum pengerjaan dimulai.",
+      "Pelunasan dilakukan setelah proyek selesai dan sebelum source code diserahkan.",
+      "Maksimal 2 kali revisi minor.",
+      "Revisi major atau penambahan fitur dikenakan biaya tambahan.",
+      "Domain dan hosting tidak termasuk dalam harga kecuali disepakati.",
+      "Setiap proyek mendapatkan masa garansi bug fixing selama 14 hari setelah deployment."
+    ]
+  },
+  "notes": {
+    "title": "Catatan",
+    "items": [
+      {
+        "marker": "*",
+        "relatedService": "Landing Page",
+        "content": "Landing page menggunakan template yang dimodifikasi tentu berbeda dengan landing page yang desainnya dibuat dari nol."
+      },
+      {
+        "marker": "*",
+        "relatedService": "Company Profile",
+        "content": "Company profile statis berbeda dengan company profile yang memiliki CMS (Content Management System)."
+      },
+      {
+        "marker": "*",
+        "relatedService": "Admin Dashboard",
+        "content": "Dashboard sederhana berbeda dengan dashboard yang memiliki role-based access control."
+      }
+    ]
+  }
+}

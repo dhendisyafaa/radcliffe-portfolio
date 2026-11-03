@@ -1,4 +1,6 @@
+import Link from "next/link";
 import TitleSection from "../homepage/TitleSection";
+import { Button } from "../ui/button";
 
 const MyDescription = () => {
   return (
@@ -26,13 +28,22 @@ const MyDescription = () => {
               code, design, and storytelling.
             </span>
           </p>
-          <a
-            href="/assets/CURRICULUM%20VITAE%20-%20DHENDI%20SYAFA%20ATHALLAH%20PUTRA.pdf"
-            download="CURRICULUM VITAE - DHENDI SYAFA ATHALLAH PUTRA"
-            className="inline-block mt-6 rounded-md bg-primary px-3 py-2 font-semibold text-white transition-opacity hover:opacity-80"
-          >
-            Download CV
-          </a>
+          <div className="mt-6 flex flex-wrap gap-3">
+            <a
+              href="/assets/CURRICULUM%20VITAE%20-%20DHENDI%20SYAFA%20ATHALLAH%20PUTRA.pdf"
+              download="CURRICULUM VITAE - DHENDI SYAFA ATHALLAH PUTRA"
+              className="inline-flex items-center rounded-md bg-primary px-4 py-2 font-semibold text-white transition-opacity hover:opacity-80"
+            >
+              Download CV
+            </a>
+            <Button
+              asChild
+              variant="outline"
+              className="border-white/35 text-white"
+            >
+              <Link href="/rate-card">Lihat Rate Card</Link>
+            </Button>
+          </div>
         </div>
       </div>
     </section>

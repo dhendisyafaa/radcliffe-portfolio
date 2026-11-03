@@ -9,21 +9,15 @@ import {
   FormMessage,
 } from "@/components/ui/form";
 import { Input } from "@/components/ui/input";
-import { useCreateContact } from "@/pages/api/resolvers/contactResolver";
 import { zodResolver } from "@hookform/resolvers/zod";
-import { useState } from "react";
 import { useForm } from "react-hook-form";
 import * as z from "zod";
-import LoadingOval from "../common/loader/LoadingOval";
 import { Textarea } from "../ui/textarea";
-import { useToast } from "../ui/use-toast";
 import TitleSection from "./TitleSection";
 
-const ContactSection = () => {
-  const [loadingButton, setloadingButton] = useState(false);
-  const { mutateAsync: createContact, isSuccess } = useCreateContact();
-  const { toast } = useToast();
+const WHATSAPP_NUMBER = "6285861533508";
 
+const ContactSection = () => {
   const formSchema = z.object({
     company_name: z
       .string()
@@ -45,27 +39,19 @@ const ContactSection = () => {
     },
   });
 
-  async function onSubmit(values) {
-    try {
-      setloadingButton(true);
-      await createContact(values);
-      setloadingButton(false);
-      toast({
-        title: "Your message saved successfully",
-        description: "I will reply to your message via email ASAP!",
-      });
-      form.reset();
-    } catch (error) {
-      setloadingButton(false);
-      console.log("error", error);
-      if (error.response) {
-        toast({
-          variant: "destructive",
-          title: "Uh oh! Something went wrong.",
-          description: "There was a problem with your request.",
-        });
-      }
-    }
+  function onSubmit(values) {
+    const message = [
+      "Halo, saya ingin menghubungi Anda.",
+      "",
+      `Nama: ${values.company_name}`,
+      `Email: ${values.company_email}`,
+      `Pesan: ${values.message}`,
+    ].join("\n");
+    const whatsappUrl = `https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent(
+      message
+    )}`;
+
+    window.open(whatsappUrl, "_blank", "noopener,noreferrer");
   }
 
   return (
@@ -73,7 +59,7 @@ const ContactSection = () => {
       <div className="w-full">
         <TitleSection
           title={"Contact"}
-          description={"Chat with me on email!"}
+          description={"Chat with me on WhatsApp!"}
         />
         <Form {...form}>
           <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-8">
@@ -137,11 +123,9 @@ const ContactSection = () => {
             />
             <Button
               type="submit"
-              disabled={loadingButton}
               className="flex items-center gap-3 w-full md:max-w-fit"
             >
-              {loadingButton && <LoadingOval />}
-              Submit
+              Kirim ke WhatsApp
             </Button>
           </form>
         </Form>
