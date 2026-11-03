@@ -16,14 +16,19 @@
           "Rp3.000.000"
         ],
         [
-          "Event Website",
-          "Website seminar, kompetisi, atau event",
-          "Rp2.500.000"
-        ],
-        [
           "Multi-page Website",
           "Website dengan beberapa halaman",
           "Rp3.500.000"
+        ],
+        [
+          "Event Website",
+          "Website seminar, kompetisi, atau event",
+          "Rp5.000.000"
+        ],
+        [
+          "E-commerce Website",
+          "Website toko online dengan fitur pembayaran",
+          "Rp6.000.000"
         ]
       ]
     },
@@ -39,11 +44,7 @@
         ],
         ["Admin Dashboard", "Dashboard administrasi", "Rp2.000.000"],
         ["CRUD System", "Create, Read, Update, Delete", "Rp1.500.000"],
-        [
-          "REST API Development",
-          "Pembuatan REST API",
-          "Rp1.500.000"
-        ],
+        ["REST API Development", "Pembuatan REST API", "Rp1.500.000"],
         [
           "Database Integration",
           "Integrasi dan pengelolaan database",
