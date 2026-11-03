@@ -4,70 +4,114 @@ import TitleSection from "@/components/homepage/TitleSection";
 import RATE_CARD from "@/constant/rate_card.json";
 
 const RateTable = ({ headers, rows, markedServices = [] }) => (
-  <div className="overflow-x-auto rounded-lg border border-white/10 bg-black/30 backdrop-blur-sm">
-    <table className="w-full min-w-[32rem] text-left text-sm text-gray-200">
-      <thead className="border-b border-white/10 bg-white/5 text-xs uppercase text-gray-300">
-        <tr>
-          {headers.map((header, index) => (
-            <th
-              key={header}
-              scope="col"
-              className={`px-4 py-3 font-semibold ${
-                index === headers.length - 1 ? "text-right" : ""
-              }`}
-            >
-              {header}
-            </th>
-          ))}
-        </tr>
-      </thead>
-      <tbody className="divide-y divide-white/10">
-        {rows.map((row) => (
-          <tr key={row[0]} className="transition-colors hover:bg-white/5">
-            {row.map((cell, index) => (
-              <td
-                key={`${row[0]}-${index}`}
-                className={`px-4 py-3 ${
-                  index === 0
-                    ? "font-medium text-white"
-                    : index === row.length - 1
-                      ? "whitespace-nowrap text-right font-semibold text-primary"
-                      : ""
+  <>
+    <div className="space-y-3 sm:hidden">
+      {rows.map((row) => (
+        <article
+          key={row[0]}
+          className="rounded-lg border border-white/10 bg-black/30 p-4 text-sm text-gray-200 backdrop-blur-sm"
+        >
+          <h3 className="break-words font-semibold text-white">
+            {row[0]}
+            {markedServices.includes(row[0]) && (
+              <span className="ml-1 text-red-500" aria-hidden="true">
+                *
+              </span>
+            )}
+          </h3>
+          <dl className="mt-3 space-y-3">
+            {row.slice(1).map((cell, index) => {
+              const columnIndex = index + 1;
+              const isPrice = columnIndex === row.length - 1;
+
+              return (
+                <div
+                  key={`${row[0]}-${columnIndex}`}
+                  className="border-t border-white/10 pt-2"
+                >
+                  <dt className="text-xs font-medium text-gray-400">
+                    {headers[columnIndex]}
+                  </dt>
+                  <dd
+                    className={`mt-1 break-words ${
+                      isPrice ? "font-semibold text-primary" : ""
+                    }`}
+                  >
+                    {cell}
+                  </dd>
+                </div>
+              );
+            })}
+          </dl>
+        </article>
+      ))}
+    </div>
+
+    <div className="hidden overflow-x-auto rounded-lg border border-white/10 bg-black/30 backdrop-blur-sm sm:block">
+      <table className="w-full table-fixed text-left text-sm text-gray-200">
+        <thead className="border-b border-white/10 bg-white/5 text-xs uppercase text-gray-300">
+          <tr>
+            {headers.map((header, index) => (
+              <th
+                key={header}
+                scope="col"
+                className={`break-words px-3 py-3 font-semibold md:px-4 ${
+                  index === headers.length - 1 ? "text-right" : ""
                 }`}
               >
-                {cell}
-                {index === 0 && markedServices.includes(row[0]) && (
-                  <span className="ml-1 text-red-500" aria-hidden="true">
-                    *
-                  </span>
-                )}
-              </td>
+                {header}
+              </th>
             ))}
           </tr>
-        ))}
-      </tbody>
-    </table>
-  </div>
+        </thead>
+        <tbody className="divide-y divide-white/10">
+          {rows.map((row) => (
+            <tr key={row[0]} className="transition-colors hover:bg-white/5">
+              {row.map((cell, index) => (
+                <td
+                  key={`${row[0]}-${index}`}
+                  className={`break-words px-3 py-3 md:px-4 ${
+                    index === 0
+                      ? "font-medium text-white"
+                      : index === row.length - 1
+                        ? "text-right font-semibold text-primary"
+                        : ""
+                  }`}
+                >
+                  {cell}
+                  {index === 0 && markedServices.includes(row[0]) && (
+                    <span className="ml-1 text-red-500" aria-hidden="true">
+                      *
+                    </span>
+                  )}
+                </td>
+              ))}
+            </tr>
+          ))}
+        </tbody>
+      </table>
+    </div>
+  </>
 );
 
 const RateCard = () => {
   return (
     <div className="bg-[url('/assets/hero-pattern.svg')] bg-center bg-cover bg-no-repeat">
       <HomepageLayout>
-        <main className="pt-16">
-          <section>
+        <main className="min-w-0 pt-16">
+          <section className="min-w-0">
             <TitleSection
               title={RATE_CARD.title}
               description={RATE_CARD.description}
             />
-            <p className="mb-8 max-w-2xl text-gray-200">
+            <p className="mb-8 max-w-2xl break-words text-sm leading-relaxed text-gray-200 sm:text-base">
               {RATE_CARD.introduction}
             </p>
 
-            <div className="space-y-10">
+            <div className="space-y-8 sm:space-y-10">
               {RATE_CARD.serviceCategories.map((category) => (
                 <section key={category.title}>
-                  <h2 className="mb-4 text-xl font-bold text-white md:text-2xl">
+                  <h2 className="mb-4 break-words text-lg font-bold text-white sm:text-xl md:text-2xl">
                     {category.title}
                   </h2>
                   <RateTable
@@ -94,11 +138,11 @@ const RateCard = () => {
                   title={RATE_CARD.terms.title}
                   description={RATE_CARD.terms.description}
                 />
-                <div className="rounded-lg border border-white/10 bg-black/30 p-5 text-gray-200 backdrop-blur-sm md:p-6">
+                <div className="rounded-lg border border-white/10 bg-black/30 p-4 text-sm leading-relaxed text-gray-200 backdrop-blur-sm sm:p-5 sm:text-base md:p-6">
                   <h2 className="mb-4 font-semibold text-white">
                     {RATE_CARD.terms.heading}
                   </h2>
-                  <ol className="list-inside list-decimal space-y-3">
+                  <ol className="list-outside space-y-3 pl-5">
                     {RATE_CARD.terms.items.map((term) => (
                       <li key={term}>{term}</li>
                     ))}
@@ -107,10 +151,10 @@ const RateCard = () => {
               </section>
 
               <section>
-                <h2 className="mb-4 text-xl font-bold text-white md:text-2xl">
+                <h2 className="mb-4 break-words text-lg font-bold text-white sm:text-xl md:text-2xl">
                   {RATE_CARD.notes.title}
                 </h2>
-                <ul className="space-y-3 text-gray-200">
+                <ul className="space-y-3 text-sm leading-relaxed text-gray-200 sm:text-base">
                   {RATE_CARD.notes.items.map((note) => (
                     <li
                       key={note.relatedService}
